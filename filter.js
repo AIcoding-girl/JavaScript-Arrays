@@ -34,5 +34,21 @@ const foundItem = items.find((item) => {
 
 // forEach
 items.forEach((item) => {
-    console.log(item.price)
+    // console.log(item.price)
 })
+
+
+// some; returns only true (when reaches first true statement) or false
+const hasInexpensiveItem = items.some((item) => {
+    return item.price <= 4
+})
+
+console.log(hasInexpensiveItem);
+
+
+// every; checks if every element is true for the statement
+const hasInexpensiveItems = items.every((item) => {
+    return item.price <= 100
+})
+
+console.log(hasInexpensiveItems);
