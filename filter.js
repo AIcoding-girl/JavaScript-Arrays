@@ -43,7 +43,7 @@ const hasInexpensiveItem = items.some((item) => {
     return item.price <= 4
 })
 
-console.log(hasInexpensiveItem);
+// console.log(hasInexpensiveItem);
 
 
 // every; checks if every element is true for the statement
@@ -51,4 +51,20 @@ const hasInexpensiveItems = items.every((item) => {
     return item.price <= 100
 })
 
-console.log(hasInexpensiveItems);
+// console.log(hasInexpensiveItems);
+
+
+// reduce
+const total = items.reduce((currentTotal, item) => {
+    return item.price + currentTotal
+}, 0)
+
+// currentTotal element starts with second parameter in function ('0'), and after each iteration updates its value
+
+// console.log(total);
+
+
+// includes
+const numbers = [1, 2, 3, 5, 8, 9];
+const includesTwo = numbers.includes(2);
+console.log(includesTwo);
